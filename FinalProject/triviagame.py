@@ -49,14 +49,13 @@ def triviagame():
           correct += 1 #correct counter
         elif trivia == "incorrect":
           incorrect += 1  #incorrect counter
-    print correct
-    print incorrect
+        if correct == 3 or incorrect == 7:
+          break
+          
     if correct >=3:
         print "You have won! Here is the key you seek"  #win 
-        #play win sound
     elif incorrect >=7:
         print "You have failed the test.  Die Now!"  #lose
-        #play lose sound
         #death 
     
         
