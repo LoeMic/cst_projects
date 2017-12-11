@@ -47,15 +47,19 @@ def triviagame():
         trivia = triviaquestions(questnum)
         if trivia == "correct":
           correct += 1 #correct counter
+          showInformation("Correct!")
         elif trivia == "incorrect":
           incorrect += 1  #incorrect counter
+          showInformation("Incorrect!")
         if correct == 3 or incorrect == 7:
           break
           
     if correct >=3:
-        print "You have won! Here is the key you seek"  #win 
+        showInformation("You have won! Here is the key you seek")  #win
+        return true 
     elif incorrect >=7:
-        print "You have failed the test.  Die Now!"  #lose
+        showInformation("You have failed the test.  Die Now!")  #lose
+        return false
         #death 
     
         
